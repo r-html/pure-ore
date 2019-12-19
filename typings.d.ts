@@ -29,11 +29,7 @@
 //   Observable
 // } from "rxjs";
 // import { queryParentRouterSlot } from "router-slot";
-declare global {
-  interface HTMLElementTagNameMap {
-    'about-component': HTMLElement;
-  }
-}
+
 interface CustomElementConfig<T> {
   selector: string;
   template?: (self: T) => TemplateResult;

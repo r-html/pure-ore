@@ -44,7 +44,7 @@ export default Component({
 
     constructor() {
       super();
-      this.changestate = fromEvent(window, "changestate").pipe(
+      this.changeStateEvent = fromEvent(window, "changestate").pipe(
         tap(
           () => (this.routerState = window.location.pathname.split("/").pop())
         )
@@ -52,7 +52,7 @@ export default Component({
     }
 
     OnUpdateFirst() {
-      this.changestate.subscribe();
+      this.changeStateEvent.subscribe();
     }
   }
 );
