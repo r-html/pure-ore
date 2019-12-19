@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script
+      type="text/javascript"
+      src="https://rawcdn.githack.com/rxdi/graphql-webcomponent/998e06c0824224fac89773486727f512afe01ad4/dist/index_0.0.13.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./app/app.js"
+    ></script>
+  </head>
+  <body>
+    <app-component></app-component>
+
+    <setup-graphql
+      uri="https://countries.trevorblades.com/"
+      pubsub="wss://pubsub.youvolio.com/subscriptions"
+    ></setup-graphql>
+    <script>
+      const setup = document.querySelector("setup-graphql");
+      setup.onRequest = async function() {
+        return new Headers();
+      };
+      setup.loading = () => {
+        return "Loading...";
+      };
+      setup.error = e => {
+        return e;
+      };
+      setup.ready();
+    </script>
+  </body>
+</html>

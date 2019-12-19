@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "npm run build && npx serve ./src",
+    "build": "cp ./src/index.html ./src/404.html"
+  },
+  "dependencies": {
+    "@rxdi/graphql-webcomponent": "0.0.13"
+  },
+  "devDependencies": {
+    "serve": "11.2.0"
+  }
+}
