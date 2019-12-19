@@ -10,10 +10,7 @@
       type="text/javascript"
       src="https://rawcdn.githack.com/rxdi/graphql-webcomponent/998e06c0824224fac89773486727f512afe01ad4/dist/index_0.0.13.js"
     ></script>
-    <script
-      type="text/javascript"
-      src="./app/app.js"
-    ></script>
+    <script type="text/javascript" src="./app/app.js"></script>
   </head>
   <body>
     <app-component></app-component>
@@ -23,12 +20,12 @@
       pubsub="wss://pubsub.youvolio.com/subscriptions"
     ></setup-graphql>
     <script>
-      const setup = document.querySelector("setup-graphql");
+      const setup = document.querySelector('setup-graphql');
       setup.onRequest = async function() {
         return new Headers();
       };
       setup.loading = () => {
-        return "Loading...";
+        return 'Loading...';
       };
       setup.error = e => {
         return e;

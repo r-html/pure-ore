@@ -1,5 +1,5 @@
 export default Component({
-  selector: "my-component",
+  selector: 'my-component',
   template() {
     return html`
       My Component route params "omg": '${this.params.omg}'
