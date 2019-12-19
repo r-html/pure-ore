@@ -7,7 +7,7 @@ export default Component({
         <r-fetch .query=${`{ continents { name } }`}></r-fetch>
         <r-render .state=${({ data: { continents } }) => html`
           <r-for .of=${continents}>
-            <r-let .item=${({ name }) => name}></r-let>
+            <r-let .item=${({ name }) => html`${name}`}></r-let>
           </r-for>
         `}>
         </r-render>
