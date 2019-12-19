@@ -1,11 +1,15 @@
 {
   "scripts": {
     "start": "npm run build && npx serve ./src",
+    "start-parcel":"npx parcel ./src/index.html",
     "build": "cp ./src/index.html ./src/404.html"
   },
   "dependencies": {
     "@rxdi/graphql-webcomponent": "0.0.13"
   },
+  "browserslist": [
+    "last 1 chrome versions"
+  ],
   "devDependencies": {
     "serve": "11.2.0"
   }

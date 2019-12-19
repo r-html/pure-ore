@@ -1,2 +1,4 @@
 node_modules
 404.html
+.cache
+dist
