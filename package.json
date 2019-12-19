@@ -4,13 +4,12 @@
     "start-parcel": "npx parcel ./src/index.html",
     "build": "cp ./src/index.html ./src/404.html"
   },
-  "dependencies": {
-    "@rxdi/graphql-webcomponent": "0.0.15"
-  },
   "browserslist": [
     "last 1 chrome versions"
   ],
   "devDependencies": {
-    "serve": "11.2.0"
+    "serve": "11.2.0",
+    "@rxdi/ui-kit": "0.7.49",
+    "@rxdi/graphql-webcomponent": "0.0.16"
   }
 }

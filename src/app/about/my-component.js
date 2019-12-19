@@ -2,7 +2,9 @@ export default Component({
   selector: 'my-component',
   template() {
     return html`
-      My Component route params "omg": '${this.params.omg}'
+      <div>
+        My Component route params "omg": '${this.params.omg}'
+      </div>
     `;
   }
 })(class MyComponent extends LitElement {});
