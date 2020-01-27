@@ -4,11 +4,18 @@ Component({
     <router-link path="/home">
       <rx-button palette="primary">Home</rx-button>
     </router-link>
+
     <router-link path="/about">
       <rx-button palette="primary">About</rx-button>
     </router-link>
-    <div>
-      <router-outlet
+
+    <button>
+      <a href="/spiridonkata">
+        Spiridonkata
+      </a>
+    </button>
+   
+    <router-outlet
         .routes=${[
           {
             path: 'home',
@@ -19,11 +26,14 @@ Component({
             component: () => import('./about/about.js')
           },
           {
+            path: 'spiridonkata',
+            component: () => import('./spiridonkata.js')
+          },
+          {
             path: '**',
             redirectTo: '/home'
           }
         ]}
       ></router-outlet>
-    </div>
   `
 })(class AppComponent extends LitElement {});

@@ -7,38 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>@rhtml Pure Ore Starter</title>
 
-    <!-- Prod -->
     <script
       type="text/javascript"
       src="https://rawcdn.githack.com/rxdi/graphql-webcomponent/145a725494ad3b38a90b1510b32ec8eb55fef3f3/dist/ui-kit/0.0.15.js"
     ></script>
-
-    <!-- Dev -->
-    <!-- <script
-      type="text/javascript"
-      src="../node_modules/@rxdi/graphql-webcomponent/src/ui-kit/index.ts"
-    ></script> -->
     <script type="text/javascript" src="./app/app.js"></script>
   </head>
   <body>
     <app-component></app-component>
-
-    <setup-graphql
-      uri="https://countries.trevorblades.com/"
-      pubsub="wss://pubsub.youvolio.com/subscriptions"
-    ></setup-graphql>
-    <script>
-      const setup = document.querySelector('setup-graphql');
-      setup.onRequest = async function() {
-        return new Headers();
-      };
-      setup.loading = () => {
-        return 'Loading...';
-      };
-      setup.error = e => {
-        return e;
-      };
-      setup.ready();
-    </script>
   </body>
 </html>
